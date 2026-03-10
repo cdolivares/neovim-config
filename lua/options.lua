@@ -94,7 +94,9 @@ if vim.fn.has("nvim-0.12") > 0 then
 end
 
 -- window
-vim.opt.winborder = "rounded" -- rounded border for all floating windows
+if vim.fn.has("nvim-0.11") > 0 then
+    vim.opt.winborder = "rounded" -- rounded border for all floating windows
+end
 vim.opt.winminwidth = 5
 
 -- Hide cmd line

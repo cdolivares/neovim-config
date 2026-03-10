@@ -292,6 +292,32 @@ local builtin_plugins = {
             require("which-key").setup()
         end,
     },
+    -- File tree sidebar
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+        },
+        cmd = "Neotree",
+        keys = {
+            { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle file [E]xplorer" },
+        },
+        opts = {
+            filesystem = {
+                follow_current_file = { enabled = true },
+                filtered_items = {
+                    hide_dotfiles = false,
+                    hide_gitignored = false,
+                },
+            },
+            window = {
+                width = 35,
+                position = "left",
+            },
+        },
+    },
 }
 
 local exist, custom = pcall(require, "custom")
