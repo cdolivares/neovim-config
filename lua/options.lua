@@ -67,7 +67,7 @@ o.inccommand = "split" -- review substitutions live, as you type
 -- ui
 o.cursorline = true -- highlight the current line
 o.laststatus = 2 -- only the last window will always have a status line
-o.lazyredraw = true -- don"t update the display while executing macros
+-- o.lazyredraw = true -- don"t update the display while executing macros (removed: not supported in nvim 0.12+)
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
